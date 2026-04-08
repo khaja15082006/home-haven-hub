@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { properties } from "@/data/properties";
+
 import { PlusCircle, CheckCircle } from "lucide-react";
 
 export default function AddPropertyPage() {
