@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import HomePage from "@/pages/Home";
 import LoginPage from "@/pages/Login";
 import SignupPage from "@/pages/Signup";
@@ -26,18 +27,21 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-            <Route path="/properties" element={<PropertiesPage />} />
-            <Route path="/booking/:id" element={<BookingPage />} />
-            <Route path="/bookings" element={<BookingsPage />} />
-            <Route path="/add-property" element={<AddPropertyPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="min-h-screen">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/properties" element={<PropertiesPage />} />
+              <Route path="/booking/:id" element={<BookingPage />} />
+              <Route path="/bookings" element={<BookingsPage />} />
+              <Route path="/add-property" element={<AddPropertyPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
