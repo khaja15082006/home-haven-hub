@@ -1,7 +1,7 @@
 import { useAuth } from "@/context/AuthContext";
 import { getBookings, getMessages } from "@/data/bookings";
 import { motion } from "framer-motion";
-import { Shield, Users, Home, Mail, TrendingUp, CalendarDays } from "lucide-react";
+import { Shield, Users, Home, Mail, CalendarDays } from "lucide-react";
 
 export default function AdminPage() {
   const { user, allUsers } = useAuth();
