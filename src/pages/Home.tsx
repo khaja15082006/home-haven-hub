@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, ArrowRight, MapPin, Star, Shield, Home as HomeIcon, Building2, Users, Sparkles, Quote, ChevronRight, TrendingUp } from "lucide-react";
 import bannerImg from "@/assets/banner.jpg";
-import { properties, allCities } from "@/data/properties";
+import { properties } from "@/data/properties";
 import PropertyCard from "@/components/PropertyCard";
 
 const stats = [
