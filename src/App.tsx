@@ -13,6 +13,7 @@ import PropertiesPage from "@/pages/Properties";
 import BookingPage from "@/pages/Booking";
 import BookingsPage from "@/pages/Bookings";
 import AddPropertyPage from "@/pages/AddProperty";
+import PropertyDetailPage from "@/pages/PropertyDetail";
 import ContactPage from "@/pages/Contact";
 import AdminPage from "@/pages/Admin";
 import NotFound from "@/pages/NotFound";
