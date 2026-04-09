@@ -14,8 +14,13 @@ export default function PropertiesPage() {
   const [maxPrice, setMaxPrice] = useState("");
   const [propertyType, setPropertyType] = useState("");
 
+  const allProperties = useMemo(() => {
+    const custom = JSON.parse(localStorage.getItem("sf_custom_properties") || "[]");
+    return [...properties, ...custom];
+  }, []);
+
   const filtered = useMemo(() => {
-    return properties.filter((p) => {
+    return allProperties.filter((p) => {
       if (city && p.city !== city) return false;
       if (propertyType && p.type !== propertyType) return false;
       if (minPrice && p.price < Number(minPrice)) return false;
