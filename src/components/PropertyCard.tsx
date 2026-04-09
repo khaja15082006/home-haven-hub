@@ -12,7 +12,7 @@ export default function PropertyCard({ property, index = 0 }: { property: Proper
       transition={{ duration: 0.5, delay: index * 0.05 }}
     >
       <Link
-        to={`/booking/${property.id}`}
+        to={`/property/${property.id}`}
         className="group block overflow-hidden rounded-2xl border bg-card shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover"
       >
         <div className="relative h-52 overflow-hidden">

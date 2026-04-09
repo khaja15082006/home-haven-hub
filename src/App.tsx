@@ -13,6 +13,7 @@ import PropertiesPage from "@/pages/Properties";
 import BookingPage from "@/pages/Booking";
 import BookingsPage from "@/pages/Bookings";
 import AddPropertyPage from "@/pages/AddProperty";
+import PropertyDetailPage from "@/pages/PropertyDetail";
 import ContactPage from "@/pages/Contact";
 import AdminPage from "@/pages/Admin";
 import NotFound from "@/pages/NotFound";
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/properties" element={<PropertiesPage />} />
+              <Route path="/property/:id" element={<PropertyDetailPage />} />
               <Route path="/booking/:id" element={<BookingPage />} />
               <Route path="/bookings" element={<BookingsPage />} />
               <Route path="/add-property" element={<AddPropertyPage />} />
