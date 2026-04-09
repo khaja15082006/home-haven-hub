@@ -56,18 +56,22 @@ export interface Property {
 
 const adjectives = ["Luxury", "Cozy", "Modern", "Elegant", "Spacious", "Premium", "Royal", "Grand", "Charming", "Classic", "Serene", "Beautiful", "Stylish", "Deluxe", "Heritage"];
 
-export const properties: Property[] = cities.flatMap((city) =>
-  Array.from({ length: 15 }, (_, i) => ({
-    id: `${city}_${i}`,
-    title: `${adjectives[i % adjectives.length]} ${types[i % 3]} in ${city}`,
-    city,
-    type: types[i % 3],
-    price: 2000 + i * 350,
-    image: images[i % images.length],
-    bedrooms: 1 + (i % 4),
-    bathrooms: 1 + (i % 3),
-    area: 800 + i * 120,
-  }))
+export const properties: Property[] = cities.flatMap((city, ci) =>
+  Array.from({ length: 15 }, (_, i) => {
+    const type = types[i % 3];
+    const imgs = imagesByType[type];
+    return {
+      id: `${city}_${i}`,
+      title: `${adjectives[i % adjectives.length]} ${type} in ${city}`,
+      city,
+      type,
+      price: 2000 + ((ci * 3 + i) % 12) * 400 + i * 200,
+      image: imgs[(ci + i) % imgs.length],
+      bedrooms: 1 + (i % 4),
+      bathrooms: 1 + (i % 3),
+      area: 800 + i * 120,
+    };
+  })
 );
 
 export const allCities = cities;
