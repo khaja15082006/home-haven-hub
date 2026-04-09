@@ -35,10 +35,12 @@ export interface Property {
   area: number;
 }
 
+const adjectives = ["Luxury", "Cozy", "Modern", "Elegant", "Spacious", "Premium", "Royal", "Grand", "Charming", "Classic", "Serene", "Beautiful", "Stylish", "Deluxe", "Heritage"];
+
 export const properties: Property[] = cities.flatMap((city) =>
   Array.from({ length: 15 }, (_, i) => ({
     id: `${city}_${i}`,
-    title: `${types[i % 3]} ${i + 1} in ${city}`,
+    title: `${adjectives[i % adjectives.length]} ${types[i % 3]} in ${city}`,
     city,
     type: types[i % 3],
     price: 2000 + i * 350,
