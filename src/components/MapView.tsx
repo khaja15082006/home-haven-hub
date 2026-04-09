@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Property } from "@/data/properties";
-import { MapPin, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { MapPin } from "lucide-react";
 
 // City coordinates for the 45 supported cities
 const cityCoords: Record<string, [number, number]> = {
